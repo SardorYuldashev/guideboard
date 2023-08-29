@@ -1,0 +1,65 @@
+### POST User
+POST http://localhost:3000/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzI1ODEzLCJleHAiOjE2OTM0MTIyMTN9.QK05Fonc_hAtWJeCpObu6XhM5lCwpcszEc4fg6IxZM0 
+Content-Type: application/json
+
+{
+  "first_name": "Sardor",
+  "last_name": "Yuldashev",
+  "age": 29,
+  "role": "admin",
+  "username": "sardor",
+  "password": "1234"
+}
+
+### LOGIN User
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "username": "sardor",
+  "password": "1234"
+}
+
+### GET Users
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzI1ODEzLCJleHAiOjE2OTM0MTIyMTN9.QK05Fonc_hAtWJeCpObu6XhM5lCwpcszEc4fg6IxZM0
+
+### GET Me
+GET http://localhost:3000/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzI1ODEzLCJleHAiOjE2OTM0MTIyMTN9.QK05Fonc_hAtWJeCpObu6XhM5lCwpcszEc4fg6IxZM0
+
+
+### GET Users
+GET http://localhost:3000/users/9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzI1ODEzLCJleHAiOjE2OTM0MTIyMTN9.QK05Fonc_hAtWJeCpObu6XhM5lCwpcszEc4fg6IxZM0
+
+
+### EDIT Me
+PATCH http://localhost:3000/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo5LCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzMzI1MDE0LCJleHAiOjE2OTM0MTE0MTR9.fRCfswpX1AnvLFmOj4JxvqOuIFL6J1Eci3zdTGo2Enw
+Content-Type: application/json
+
+{
+  "first_name": "Alisher"
+}
+
+
+### EDIT User
+PATCH http://localhost:3000/users/9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzI1ODEzLCJleHAiOjE2OTM0MTIyMTN9.QK05Fonc_hAtWJeCpObu6XhM5lCwpcszEc4fg6IxZM0 
+Content-Type: application/json
+
+{
+  "username": "oxunov"
+}
+
+
+### DELETE User
+DELETE http://localhost:3000/users/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMCwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzMzMTI4NiwiZXhwIjoxNjkzNDE3Njg2fQ.Q7sJsvFN05fXFqm5VK8Aar3V6fQlUv9zoWxdyvKon70
+
+
+# Admin: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzI1ODEzLCJleHAiOjE2OTM0MTIyMTN9.QK05Fonc_hAtWJeCpObu6XhM5lCwpcszEc4fg6IxZM0  
+
+# Employee: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo5LCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzMzI1MDE0LCJleHAiOjE2OTM0MTE0MTR9.fRCfswpX1AnvLFmOj4JxvqOuIFL6J1Eci3zdTGo2Enw
