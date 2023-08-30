@@ -14,8 +14,8 @@ const {
   getUsersSchema,
   showUserSchema,
   patchMeSchema,
-  patchUserSchema, 
-  deleteUserSchema} = require('./_schemas');
+  patchUserSchema,
+  deleteUserSchema } = require('./_schemas');
 
 /**
  * @param {express.Request} req
@@ -28,7 +28,7 @@ const postUser = async (req, res, next) => {
 
     const data = await addUser(req.body);
 
-    res.status(201).json(data);
+    res.status(201).json({ data });
   } catch (error) {
     next(error);
   };
@@ -142,7 +142,7 @@ const patchUser = async (req, res, next) => {
 const deleteUser = async (req, res, next) => {
   try {
     httpValidator({ params: req.params }, deleteUserSchema);
-    
+
     const data = await removeUser(req.params, req.user);
 
     res.status(200).json({ data });

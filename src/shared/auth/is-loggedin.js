@@ -10,9 +10,15 @@ const { UnauthorizedError } = require('../errors');
  */
 const isLoggedIn = (req, res, next) => {
   try {
-    const key = req.headers.authorization.split(' ');
+    const auth = req.headers.authorization;
 
-    if(key[0] !== "Bearer") {
+    if (!auth) {
+      throw new UnauthorizedError('Avtorizatsiya qilmagansiz');
+    };
+
+    const key = auth.split(' ');
+
+    if (key[0] !== "Bearer") {
       throw new UnauthorizedError("Xato token")
     };
 

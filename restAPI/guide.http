@@ -1,0 +1,36 @@
+### POST Guide
+POST http://localhost:3000/guides
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzM1OTE5LCJleHAiOjE2OTM0MjIzMTl9.I4ivO_aW8TYqF_UYBAqZIBLRDrVtKs7DL01X-LdArz0
+Content-Type: application/json
+
+{
+  "title": "Salom",
+  "content": "Dunyo"
+}
+
+
+### GET Guides
+GET http://localhost:3000/guides?sort[by]=id&sort[order]=asc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzM1OTE5LCJleHAiOjE2OTM0MjIzMTl9.I4ivO_aW8TYqF_UYBAqZIBLRDrVtKs7DL01X-LdArz0
+
+
+
+### GET Guide
+GET http://localhost:3000/guides/12
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzM1OTE5LCJleHAiOjE2OTM0MjIzMTl9.I4ivO_aW8TYqF_UYBAqZIBLRDrVtKs7DL01X-LdArz0
+
+
+
+### EDIT Guide
+PATCH http://localhost:3000/guides/12
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzM1OTE5LCJleHAiOjE2OTM0MjIzMTl9.I4ivO_aW8TYqF_UYBAqZIBLRDrVtKs7DL01X-LdArz0
+Content-Type: application/json
+
+{
+  "title": "bye-bye",
+  "notify": false
+}
+
+### DELETE Guide
+DELETE http://localhost:3000/guides/12
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzM1OTE5LCJleHAiOjE2OTM0MjIzMTl9.I4ivO_aW8TYqF_UYBAqZIBLRDrVtKs7DL01X-LdArz0

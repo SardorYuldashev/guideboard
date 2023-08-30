@@ -8,7 +8,7 @@ const addUser = async (data) => {
     .insert({ ...data, password: hashedPassword })
     .returning('*');
 
-  return result;
+  return result[0];
 };
 
 module.exports = addUser;
