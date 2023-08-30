@@ -6,6 +6,13 @@ const addGuide = async (data) => {
     .returning('*');
 
   if (typeof data.notify === 'boolean' && data.notify === true) {
+    const users = await db('users')
+      .select();
+
+    users.forEach(async item => {
+      await db('user_guide').insert({ guide_id: result[0].id, user_id: item.id });
+    });
+
     result[0].notified = true;
   };
 

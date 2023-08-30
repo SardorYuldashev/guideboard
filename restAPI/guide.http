@@ -4,8 +4,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxL
 Content-Type: application/json
 
 {
-  "title": "Salom",
-  "content": "Dunyo"
+  "title": "Hammaga",
+  "content": "Salom",
+  "notify": true
 }
 
 
@@ -22,13 +23,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxL
 
 
 ### EDIT Guide
-PATCH http://localhost:3000/guides/12
+PATCH http://localhost:3000/guides/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzM1OTE5LCJleHAiOjE2OTM0MjIzMTl9.I4ivO_aW8TYqF_UYBAqZIBLRDrVtKs7DL01X-LdArz0
 Content-Type: application/json
 
 {
-  "title": "bye-bye",
-  "notify": false
+  "title": "Second",
+  "notify": true
 }
 
 ### DELETE Guide

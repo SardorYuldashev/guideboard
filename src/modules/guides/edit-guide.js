@@ -1,4 +1,5 @@
 const db = require('../../db');
+const { NotFoundError } = require('../../shared/errors');
 
 const editGuide = async ({ id, ...changes }) => {
   const existing = await db('guides').where({ id }).first();
@@ -17,8 +18,14 @@ const editGuide = async ({ id, ...changes }) => {
     .returning(['*']);
 
   if (typeof changes.notify === 'boolean' && changes.notify === true) {
+    const users = await db('users')
+      .select();
+
+    users.forEach(async item => {
+      await db('user_guide').insert({ guide_id: result[0].id, user_id: item.id });
+    });
+
     result[0].notified = true;
-    console.log('true keldi');
   };
 
   return result[0];
