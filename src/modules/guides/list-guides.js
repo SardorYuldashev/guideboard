@@ -16,6 +16,11 @@ const listGuides = async ({ q, page = { limit: 10, offset: 0 }, sort = { by: 'id
 
   return {
     data,
+    pageInfo: {
+      "total": data.length,
+      "offset": page.offset,
+      "limit": page.limit,
+    },
   };
 };
 

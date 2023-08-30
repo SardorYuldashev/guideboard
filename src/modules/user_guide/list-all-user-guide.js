@@ -11,6 +11,11 @@ const listAllUserGuide = async ({ page = { limit: 10, offset: 0 }, filters = { c
 
   return {
     data,
+    pageInfo: {
+      "total": data.length,
+      "offset": page.offset,
+      "limit": page.limit,
+    },
   };
 };
 
