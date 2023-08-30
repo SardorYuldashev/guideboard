@@ -15,7 +15,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozL
 
 
 ### Hamma user_guides listni ko'rish (Admin)
-GET http://localhost:3000/userguide/all
+GET http://localhost:3000/userguide/all?filters[user_id]=4
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
 
 
