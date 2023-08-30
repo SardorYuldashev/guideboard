@@ -1,4 +1,4 @@
-### POST user_guide
+### user_guide yaratish (Admin)
 POST http://localhost:3000/userguide
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
 Content-Type: application/json
@@ -9,16 +9,22 @@ Content-Type: application/json
 }
 
 
-### GET user_guides
+### Faqat o'zini user_guides listini ko'rish
 GET http://localhost:3000/userguide
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzNDE0NzA5LCJleHAiOjE2OTM1MDExMDl9.5_vV_EIpl8OBYwE3aOOpv0ET2a0MCUThpk6vfbDURLU
 
-### GET user_guide
+
+### Hamma user_guides listni ko'rish (Admin)
+GET http://localhost:3000/userguide/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
+
+
+### Bitta user_guide ni ko'rish
 GET http://localhost:3000/userguide/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzNDE0NzA5LCJleHAiOjE2OTM1MDExMDl9.5_vV_EIpl8OBYwE3aOOpv0ET2a0MCUThpk6vfbDURLU
 
 
-### EDIT user_guide
+### user_guide ni tahrirlash (Admin)
 PUT http://localhost:3000/userguide/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
 Content-Type: application/json
@@ -28,7 +34,7 @@ Content-Type: application/json
 }
 
 
-### PATCH user_guide complete
+### user_guide bilan tanishganini belgilash
 PATCH http://localhost:3000/userguide/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzNDE0NzA5LCJleHAiOjE2OTM1MDExMDl9.5_vV_EIpl8OBYwE3aOOpv0ET2a0MCUThpk6vfbDURLU
 Content-Type: application/json
@@ -38,6 +44,6 @@ Content-Type: application/json
 }
 
 
-### DELETE user_guide
+### user_guide ni o'chirish (Admin)
 DELETE http://localhost:3000/userguide/15
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk

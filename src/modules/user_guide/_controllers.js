@@ -2,17 +2,19 @@ const express = require('express');
 const httpValidator = require('../../shared/http-validator');
 const addUserGuide = require('./add-user-guide');
 const listUserGuide = require('./list-user-guide');
+const listAllUserGuide = require('./list-all-user-guide');
 const showUserGuide = require('./show-user-guide');
 const editUserGuide = require('./edit-user-guide');
 const completeUserGuide = require('./complete-user-guide');
+const removeUserGuide = require('./remove-user-guide');
 const {
   postUserGuideSchema,
   getUserGuideSchema,
   showUserGuideSchema,
   patchUserGuideSchema,
-  completedUserGuideSchema, 
-  deleteUserGuideSchema} = require('./_schemas');
-const removeUserGuide = require('./remove-user-guide');
+  completedUserGuideSchema,
+  deleteUserGuideSchema,
+  getAllUserGuideSchema } = require('./_schemas');
 
 /**
  * @param {express.Request} req
@@ -41,6 +43,23 @@ const getUserGuides = async (req, res, next) => {
     httpValidator({ query: req.query }, getUserGuideSchema)
 
     const data = await listUserGuide({ user: req.user, ...req.query });
+
+    res.status(200).json(data);
+  } catch (error) {
+    next(error);
+  };
+};
+
+/**
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+const getAllUserGuides = async (req, res, next) => {
+  try {
+    httpValidator({ query: req.query }, getAllUserGuideSchema)
+
+    const data = await listAllUserGuide({ ...req.query });
 
     res.status(200).json(data);
   } catch (error) {
@@ -119,6 +138,7 @@ const deleteUserGuide = async (req, res, next) => {
 module.exports = {
   postUserGuide,
   getUserGuides,
+  getAllUserGuides,
   getUserGuide,
   patchUserGuide,
   completedUserGuide,

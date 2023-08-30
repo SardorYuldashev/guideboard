@@ -17,6 +17,17 @@ exports.getUserGuideSchema = {
   }),
 };
 
+exports.getAllUserGuideSchema = {
+  query: Joi.object({
+    page: offsetPaginaionSchema,
+    filters: Joi.object({
+      completed: Joi.boolean(),
+      guide_id: Joi.number().integer(),
+      user_id: Joi.number().integer(),
+    }),
+  }),
+};
+
 exports.showUserGuideSchema = {
   params: Joi.object({
     id: Joi.number(),
