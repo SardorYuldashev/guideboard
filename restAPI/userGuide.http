@@ -4,8 +4,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyL
 Content-Type: application/json
 
 {
-  "guide_id": 4,
-  "user_id": 2
+  "guide_id": 1,
+  "user_id": 3
 }
 
 
@@ -15,12 +15,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozL
 
 
 ### Hamma user_guides listni ko'rish (Admin)
-GET http://localhost:3000/userguide/all?filters[completed]=false
+GET http://localhost:3000/userguide/all
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
 
 
 ### Bitta user_guide ni ko'rish
-GET http://localhost:3000/userguide/1
+GET http://localhost:3000/userguide/18
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzNDE0NzA5LCJleHAiOjE2OTM1MDExMDl9.5_vV_EIpl8OBYwE3aOOpv0ET2a0MCUThpk6vfbDURLU
 
 
