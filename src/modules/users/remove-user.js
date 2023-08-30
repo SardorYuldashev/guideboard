@@ -17,7 +17,7 @@ const removeUser = async ({ id }, user) => {
     .delete()
     .returning('*');
 
-  return result;
+  return result[0];
 };
 
 module.exports = removeUser;

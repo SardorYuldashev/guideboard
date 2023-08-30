@@ -1,0 +1,52 @@
+### POST user_guide
+POST http://localhost:3000/userguide
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzM1OTE5LCJleHAiOjE2OTM0MjIzMTl9.I4ivO_aW8TYqF_UYBAqZIBLRDrVtKs7DL01X-LdArz0
+Content-Type: application/json
+
+{
+  "guide_id": 4,
+  "user_id": 3
+}
+
+
+### GET user_guides
+GET http://localhost:3000/userguide
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzM1OTE5LCJleHAiOjE2OTM0MjIzMTl9.I4ivO_aW8TYqF_UYBAqZIBLRDrVtKs7DL01X-LdArz0
+
+### GET user_guide
+GET http://localhost:3000/userguide/12
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzMzg1MTgwLCJleHAiOjE2OTM0NzE1ODB9.AbOqb5MfgS93TG_EuKW4ls5NnSTzA4VwTG1pSj0-_Xc
+
+### EDIT user_guide
+PATCH http://localhost:3000/userguide/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzMzg1MTgwLCJleHAiOjE2OTM0NzE1ODB9.AbOqb5MfgS93TG_EuKW4ls5NnSTzA4VwTG1pSj0-_Xc
+Content-Type: application/json
+
+{
+  "completed": false
+}
+
+
+### PATCH user_guide complete
+PATCH http://localhost:3000/userguide/11
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzMzg1MTgwLCJleHAiOjE2OTM0NzE1ODB9.AbOqb5MfgS93TG_EuKW4ls5NnSTzA4VwTG1pSj0-_Xc
+Content-Type: application/json
+
+{
+  "completed": true
+}
+
+
+### DELETE user_guide
+DELETE http://localhost:3000/userguide/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzM1OTE5LCJleHAiOjE2OTM0MjIzMTl9.I4ivO_aW8TYqF_UYBAqZIBLRDrVtKs7DL01X-LdArz0 
+
+
+
+
+
+
+
+# Admin: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzM1OTE5LCJleHAiOjE2OTM0MjIzMTl9.I4ivO_aW8TYqF_UYBAqZIBLRDrVtKs7DL01X-LdArz0 
+
+# Employee: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzMzg1MTgwLCJleHAiOjE2OTM0NzE1ODB9.AbOqb5MfgS93TG_EuKW4ls5NnSTzA4VwTG1pSj0-_Xc
