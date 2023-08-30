@@ -11,10 +11,8 @@ exports.postUserGuideSchema = {
 exports.getUserGuideSchema = {
   query: Joi.object({
     page: offsetPaginaionSchema,
-    sort: makeSortSchema(["id"]),
     filters: Joi.object({
-      guide_id: Joi.number().integer(),
-      user_id: Joi.number().integer(),
+      completed: Joi.boolean(),
     }),
   }),
 };

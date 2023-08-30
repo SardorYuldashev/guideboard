@@ -11,7 +11,7 @@ const showUserGuide = async ({ id, user }) => {
     throw new NotFoundError("Foydalanuvchi uchun qo'llanma topilmadi");
   };
 
-  if (user.role === "employee" && userGuide.user_id !== user.id) {
+  if (userGuide.user_id !== user.id) {
     throw new ForbiddenError("Boshqalarni qo'llanmasini ko'rish mumkin emas");
   };
 

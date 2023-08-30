@@ -1,9 +1,8 @@
 const db = require('../../db');
 
-const listGuides = async ({ q, page = { limit: 10, offset: 0 }, sort = { by: 'id', order: 'asc' }, filters = {} }) => {
+const listGuides = async ({ q, page = { limit: 10, offset: 0 }, sort = { by: 'id', order: 'asc' } }) => {
   const dbQuery = db('guides')
-    .select()
-    .where({ ...filters });
+    .select();
 
   if (q) {
     dbQuery.andWhereILike('title', `%${q}%`);
