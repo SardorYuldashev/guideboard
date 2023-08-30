@@ -3,21 +3,30 @@ const { NotFoundError } = require('../../shared/errors');
 
 const showGuide = async ({ id }) => {
   const guide = await db('guides')
-    .where({ id })
-    .select()
+    .leftJoin('user_guide', 'user_guide.guide_id', 'guides.id')
+    .where({ 'guides.id': id })
+    .select(
+      'guides.*',
+      db.raw(`
+        COALESCE(
+          json_agg(
+            json_build_object(
+              'id', user_guide.id
+            ) 
+          ) filter (where user_guide.guide_id IS NOT NULL), '[]'
+        ) as revisions
+      `),
+    )
+    .groupBy('guides.id')
     .first();
 
   if (!guide) {
     throw new NotFoundError("Qo'llanma topilmadi");
   };
 
-  const revisions = await db('user_guide')
-    .select()
-    .where({ guide_id: id });
-
   return {
     ...guide,
-    revisions: revisions.length,
+    revisions: guide.revisions.length,
   };
 };
 

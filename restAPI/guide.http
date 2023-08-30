@@ -17,7 +17,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxL
 
 
 ### GET Guide
-GET http://localhost:3000/guides/2
+GET http://localhost:3000/guides/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzM1OTE5LCJleHAiOjE2OTM0MjIzMTl9.I4ivO_aW8TYqF_UYBAqZIBLRDrVtKs7DL01X-LdArz0
 
 
