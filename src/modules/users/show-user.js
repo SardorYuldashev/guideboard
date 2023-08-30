@@ -15,7 +15,7 @@ const showUser = async ({ id }) => {
               'completed', user_guide.completed
             ) 
           ) filter (where user_guide.user_id IS NOT NULL), '[]'
-        ) as guides
+        ) as total_guides
       `),
     )
     .groupBy('users.id')
@@ -25,18 +25,15 @@ const showUser = async ({ id }) => {
     throw new NotFoundError('Foydalanuvchi topilmadi');
   };
 
-  let total = user.guides.length
   let todo = [], read = [];
 
-  user.guides.forEach((item) => {
+  user.total_guides.forEach((item) => {
     item.completed ? read.push(item) : todo.push(item);
   });
 
-  delete user.guides;
-
   return {
     ...user,
-    total_guides: total,
+    total_guides: user.total_guides.length,
     todo_guides: todo.length,
     read_guides: read.length
   };

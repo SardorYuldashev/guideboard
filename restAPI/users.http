@@ -17,7 +17,7 @@ POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-  "username": "aziz",
+  "username": "imron",
   "password": "1234"
 }
 
@@ -27,11 +27,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyL
 
 ### GET Me
 GET http://localhost:3000/users/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzMzk5NjQwLCJleHAiOjE2OTM0ODYwNDB9.MbT3Zx7cHfr2I3aTLT2pl4TO82jEHCFvDIHCT5Dbr6M
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0Mzk0LCJleHAiOjE2OTM1MDA3OTR9.v6m3dklg4XEtwo6WbXzXfz8BBJSVOnJ7vUK8RTSuYiQ
 
 
 ### GET User
-GET http://localhost:3000/users/3
+GET http://localhost:3000/users/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzkwNTI1LCJleHAiOjE2OTM0NzY5MjV9.f7-Za6snBQnAEq2UIDDCWqB7iHFLgC_UR3ZfqmvjahE
 
 
@@ -60,6 +60,6 @@ DELETE http://localhost:3000/users/7
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo4LCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzc4NDE5LCJleHAiOjE2OTM0NjQ4MTl9.m5bK5ISmA1PgDS1lmScOMJ2vGQySuVN0SPKaDX8Urpg
 
 
-# Admin: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzI1ODEzLCJleHAiOjE2OTM0MTIyMTN9.QK05Fonc_hAtWJeCpObu6XhM5lCwpcszEc4fg6IxZM0  
+# Admin: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0Mzk0LCJleHAiOjE2OTM1MDA3OTR9.v6m3dklg4XEtwo6WbXzXfz8BBJSVOnJ7vUK8RTSuYiQ
 
 # Employee: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzMzk5NjQwLCJleHAiOjE2OTM0ODYwNDB9.MbT3Zx7cHfr2I3aTLT2pl4TO82jEHCFvDIHCT5Dbr6M
