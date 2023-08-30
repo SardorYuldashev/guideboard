@@ -11,7 +11,22 @@ const showUser = async ({ id }) => {
     throw new NotFoundError('Foydalanuvchi topilmadi');
   };
 
-  return user;
+  const guides = await db('user_guide')
+    .select('*')
+    .where({ user_id: id });
+
+  let todo = [], read = [];
+
+  guides.forEach((item) => {
+    item.completed ? read.push(item) : todo.push(item);
+  });
+
+  return {
+    ...user,
+    total_guide: guides.length,
+    todo_guides: todo.length,
+    read_guides: read.length,
+  };
 };
 
 module.exports = showUser;
