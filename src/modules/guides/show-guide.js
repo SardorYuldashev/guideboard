@@ -11,7 +11,14 @@ const showGuide = async ({ id }) => {
     throw new NotFoundError("Qo'llanma topilmadi");
   };
 
-  return guide;
+  const revisions = await db('user_guide')
+    .select()
+    .where({ guide_id: id });
+
+  return {
+    ...guide,
+    revisions: revisions.length,
+  };
 };
 
 module.exports = showGuide;

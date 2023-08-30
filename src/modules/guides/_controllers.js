@@ -2,7 +2,7 @@ const express = require('express');
 const httpValidator = require('../../shared/http-validator');
 const addGuide = require('./add-guide');
 const listGuides = require('./list-guides');
-const showGuide = require('./get-guide');
+const showGuide = require('./show-guide');
 const editGuide = require('./edit-guide');
 const removeGuide = require('./remove-guide');
 const {
