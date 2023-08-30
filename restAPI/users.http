@@ -27,7 +27,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyL
 
 ### GET Me
 GET http://localhost:3000/users/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzMzkwNTI1LCJleHAiOjE2OTM0NzY5MjV9.f7-Za6snBQnAEq2UIDDCWqB7iHFLgC_UR3ZfqmvjahE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzMzk5NjQwLCJleHAiOjE2OTM0ODYwNDB9.MbT3Zx7cHfr2I3aTLT2pl4TO82jEHCFvDIHCT5Dbr6M
 
 
 ### GET User

@@ -3,29 +3,42 @@ const { NotFoundError } = require('../../shared/errors');
 
 const showMe = async ({ id }) => {
   const user = await db('users')
-    .where({ id })
-    .select()
+    .leftJoin('user_guide', 'user_guide.user_id', 'users.id')
+    .where({ 'users.id': id })
+    .select(
+      'users.*',
+      db.raw(`
+        COALESCE(
+          json_agg(
+            json_build_object(
+              'id', user_guide.id,
+              'completed', user_guide.completed
+            ) 
+          ) filter (where user_guide.user_id IS NOT NULL), '[]'
+        ) as guides
+      `),
+    )
+    .groupBy('users.id')
     .first();
 
   if (!user) {
     throw new NotFoundError('Foydalanuvchi topilmadi');
   };
 
-  const guides = await db('user_guide')
-    .select('*')
-    .where({ user_id: id });
-
+  let total = user.guides.length
   let todo = [], read = [];
 
-  guides.forEach((item) => {
+  user.guides.forEach((item) => {
     item.completed ? read.push(item) : todo.push(item);
   });
 
+  delete user.guides;
+
   return {
     ...user,
-    total_guide: guides.length,
+    total_guides: total,
     todo_guides: todo.length,
-    read_guides: read.length,
+    read_guides: read.length
   };
 };
 
