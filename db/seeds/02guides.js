@@ -7,23 +7,23 @@ exports.seed = async function(knex) {
   await knex('guides').insert([
     {
       // id: 1,
-      title: "Birinchi qoida sarlavhasi",
-      content: "Birinchi qoida matni"
+      title: "Ishga o'z vaqtida kelish",
+      content: `Ishga kechikmasdan keling. Agar kechikayotgan bo'lsangiz administratorlarni ogohlantiring. Besabab kechikish oyligingiz qiymatiga ta'sir qiladi.`
     },
     {
       // id: 2,
-      title: "Ikkinchi qoida sarlavhasi",
-      content: "Ikkinchi qoida matni"
+      title: "Kamroq telefon o'ynash",
+      content: "Ish vaqtida telefon o'ynamang. Telefondan faqat kerakli maqsadlarda foydalaning."
     },
     {
       // id: 3,
-      title: "Uchinchi qoida sarlavhasi",
-      content: "Uchinchi qoida matni"
+      title: "Oylikni sir saqlash",
+      content: "Oylik maoshingiz qiymatini boshqalarga aytmang. Hamkasblaringiz oylik maoshi turli sabablarga ko'ra sizning oylik maoshingizdan farq qilishi mumkin."
     },
     {
       // id: 3,
-      title: "To'rtinchi qoida sarlavhasi",
-      content: "To'rtinchi qoida matni"
+      title: "Ishxona ichidagi sirlarni tashqariga olib chiqmang",
+      content: "Ishxonada konfidensial ma'lumotlarni tashqariga chiqishi yaxshi oqibatlarga olib kelmaydi"
     },
   ]);
 };

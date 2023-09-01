@@ -1,12 +1,11 @@
 ### POST Guide
 POST http://localhost:3000/guides
-Authorization: Bearer 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNTE0MzQzLCJleHAiOjE2OTM2MDA3NDN9.UwyU2v7Y8DpUQn7TiNiRGdyQniefIMQ6J1BYM0dKoBE
 Content-Type: application/json
 
 {
-  "title": "Oltinchi qoida sarlavhasi",
-  "content": "Oltinchi qoida matni",
-  "notify": true
+  "title": "arrivo",
+  "content": "Oltinchi qoida matni"
 }
 
 
@@ -17,8 +16,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyL
 
 
 ### GET Guide
-GET http://localhost:3000/guides/7
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzNDE0NzA5LCJleHAiOjE2OTM1MDExMDl9.5_vV_EIpl8OBYwE3aOOpv0ET2a0MCUThpk6vfbDURLU
+GET http://localhost:3000/guides/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzNTEwNDc5LCJleHAiOjE2OTM1OTY4Nzl9.Pj7T5D-OXCE8m_9Byv0wLok4zKIfJN-xJM5RCDoNlR4
 
 
 
