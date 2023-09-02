@@ -3,7 +3,7 @@ POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-  "username": "aziz",
+  "username": "sardor",
   "password": "1234"
 }
 
@@ -28,12 +28,12 @@ Content-Type: application/json
 
 
 ### GET Users
-GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
+GET http://localhost:3000/users?q=b&filters[role]=admin&sort[by]=id&sort[order]=asc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNTczODI4LCJleHAiOjE2OTM2NjAyMjh9.7fpj_xBAaQ9y9Mi2SIz8t-6fgZNt1hpbpp-cKhZlvk4
 
 ### GET Me
 GET http://localhost:3000/users/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNTczODI4LCJleHAiOjE2OTM2NjAyMjh9.7fpj_xBAaQ9y9Mi2SIz8t-6fgZNt1hpbpp-cKhZlvk4
 
 
 ### GET User
@@ -43,23 +43,22 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyL
 
 ### EDIT Me
 PATCH http://localhost:3000/users/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzNDE0NzA5LCJleHAiOjE2OTM1MDExMDl9.5_vV_EIpl8OBYwE3aOOpv0ET2a0MCUThpk6vfbDURLU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNTczODI4LCJleHAiOjE2OTM2NjAyMjh9.7fpj_xBAaQ9y9Mi2SIz8t-6fgZNt1hpbpp-cKhZlvk4
 Content-Type: application/json
 
 {
-  "first_name": "Aziz",
+  "first_name": "Sardor",
   "age": 29
 }
 
 
 ### EDIT User
-PATCH http://localhost:3000/users/5
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
+PATCH http://localhost:3000/users/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNjQ2MzkwLCJleHAiOjE2OTM3MzI3OTB9.n-H8d-ch2zVCVTn5jlgY23FibSbh4SA64A3fn0yslp4
 Content-Type: application/json
 
 {
-  "first_name": "Jaloliddin",
-  "password": "1234"
+  "role": "employee"
 }
 
 

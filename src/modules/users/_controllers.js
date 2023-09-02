@@ -126,7 +126,7 @@ const patchUser = async (req, res, next) => {
   try {
     httpValidator({ params: req.params, body: req.body }, patchUserSchema);
 
-    const data = await editUser({ id: req.params.id, ...req.body });
+    const data = await editUser({ id: req.params.id, user: req.user, ...req.body });
 
     res.status(200).json({ data });
   } catch (error) {

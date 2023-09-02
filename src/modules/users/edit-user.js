@@ -1,12 +1,19 @@
 const db = require('../../db');
 const { hash } = require('bcryptjs');
-const { NotFoundError } = require('../../shared/errors');
+const { NotFoundError, ForbiddenError } = require('../../shared/errors');
 
-const editUser = async ({ id, ...changes }) => {
+const editUser = async ({ id, user, ...changes }) => {
+
   const existing = await db('users').where({ id }).first();
 
   if (!existing) {
     throw new NotFoundError("Foydalanuvchi topilmadi");
+  };
+
+  if (id == user.id) {
+    if (changes.role === "admin" || changes.role === "employee") {
+      throw new ForbiddenError("Admin o'z rolini o'zgartira olmaydi");
+    };
   };
 
   const changeValues = {};

@@ -22,13 +22,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozL
 
 
 ### EDIT Guide
-PATCH http://localhost:3000/guides/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
+PATCH http://localhost:3000/guides/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNTY0NTkzLCJleHAiOjE2OTM2NTA5OTN9.Wjv1TrKoSZxfauXZqcnTVAK56sNpuawmVH54krc09Sg
 Content-Type: application/json
 
 {
-  "content": "Dunyo",
-  "notify": true
+  "content": "Yig'ishtir telefonni"
 }
 
 ### DELETE Guide
