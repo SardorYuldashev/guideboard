@@ -4,7 +4,7 @@ const { offsetPaginaionSchema } = require('../../shared/schemas');
 exports.postUserGuideSchema = {
   body: Joi.object({
     guide_id: Joi.number().integer().required(),
-    user_id: Joi.number().integer().required(),
+    user_ids: Joi.array().items(Joi.number().integer().required()).required(),
   }),
 };
 

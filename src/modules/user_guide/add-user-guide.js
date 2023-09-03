@@ -2,6 +2,7 @@ const db = require('../../db');
 const { NotFoundError } = require('../../shared/errors');
 
 const addUserGuide = async (data) => {
+
   const existingGuide = await db('guides')
     .where({ id: data.guide_id })
     .select()
@@ -11,20 +12,23 @@ const addUserGuide = async (data) => {
     throw new NotFoundError("Qo'llanma topilmadi");
   };
 
-  const existingUser = await db('users')
-    .where({ id: data.user_id })
-    .select()
-    .first();
+  const usersList = await db("users")
+    .select("id");
 
-  if (!existingUser) {
-    throw new NotFoundError("Foydalanuvchi topilmadi");
-  };
+  data.user_ids.forEach(id => {
+    const user = usersList.find(user => user.id === id);
 
-  const result = await db('user_guide')
-    .insert(data)
-    .returning('*');
+    if (!user) {
+      throw new NotFoundError(`Mavjud bo'lmagan ID kiritilgan`);
+    };
+  });
 
-  return result[0];
+  data.user_ids.forEach(async id => {
+    await db("user_guide")
+      .insert({ guide_id: data.guide_id, user_id: id });
+  });
+
+  return { message: "Foydalanuchilarga vazifalar jo'natildi" };
 };
 
 module.exports = addUserGuide;

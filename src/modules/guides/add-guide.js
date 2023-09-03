@@ -10,7 +10,8 @@ const addGuide = async (data) => {
       .select();
 
     users.forEach(async item => {
-      await db('user_guide').insert({ guide_id: result[0].id, user_id: item.id });
+      await db('user_guide')
+        .insert({ guide_id: result[0].id, user_id: item.id });
     });
 
     result[0].notified = true;
