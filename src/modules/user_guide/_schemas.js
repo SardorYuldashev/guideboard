@@ -1,5 +1,5 @@
 const Joi = require('joi');
-const { offsetPaginaionSchema, makeSortSchema } = require('../../shared/schemas');
+const { offsetPaginaionSchema } = require('../../shared/schemas');
 
 exports.postUserGuideSchema = {
   body: Joi.object({
@@ -39,8 +39,8 @@ exports.patchUserGuideSchema = {
     id: Joi.number(),
   }),
   body: Joi.object({
-    guide_id: Joi.number().integer(),
-    user_id: Joi.number().integer(),
+    guide_id: Joi.number().integer().required(),
+    user_id: Joi.number().integer().required(),
     completed: Joi.boolean(),
   }),
 };

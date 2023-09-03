@@ -1,11 +1,11 @@
 ### POST Guide
 POST http://localhost:3000/guides
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNTE0MzQzLCJleHAiOjE2OTM2MDA3NDN9.UwyU2v7Y8DpUQn7TiNiRGdyQniefIMQ6J1BYM0dKoBE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNjQ2MzkwLCJleHAiOjE2OTM3MzI3OTB9.n-H8d-ch2zVCVTn5jlgY23FibSbh4SA64A3fn0yslp4
 Content-Type: application/json
 
 {
-  "title": "arrivo",
-  "content": "Oltinchi qoida matni"
+  "title": "sasasasasas",
+  "content": "Test uchun"
 }
 
 

@@ -16,19 +16,10 @@ const listUserGuide = async ({ user, page = { limit: 10, offset: 0 }, filters = 
           'title', guides.title,
           'content', guides.content
         ) END as guide
-      `),
-      db.raw(`
-        CASE WHEN user_guide.user_id IS NULL THEN NULL
-        ELSE json_build_object(
-          'id', users.id,
-          'first_name', users.first_name,
-          'last_name', users.last_name,
-          'username', users.username
-        ) END as user
-      `),
+      `)
     )
     .where(filters)
-    .groupBy('user_guide.id', 'guides.id', 'users.id');
+    .groupBy('user_guide.id', 'guides.id');
 
   dbQuery.limit(page.limit).offset(page.offset);
 

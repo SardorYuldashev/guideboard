@@ -1,6 +1,6 @@
 const db = require('../../db');
 
-const listAllUserGuide = async ({ page = { limit: 10, offset: 0 }, filters = { completed: false } }) => {
+const listAllUserGuide = async ({ page = { limit: 10, offset: 0 }, filters = {} }) => {
   const dbQuery = db('user_guide')
     .leftJoin('guides', 'guides.id', 'user_guide.guide_id')
     .leftJoin('users', 'users.id', 'user_guide.user_id')
@@ -21,7 +21,8 @@ const listAllUserGuide = async ({ page = { limit: 10, offset: 0 }, filters = { c
           'id', users.id,
           'first_name', users.first_name,
           'last_name', users.last_name,
-          'username', users.username
+          'username', users.username,
+          'role', users.role
         ) END as user
       `),
     )

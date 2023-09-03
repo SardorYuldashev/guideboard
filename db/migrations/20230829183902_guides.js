@@ -5,8 +5,8 @@
 exports.up = function (knex) {
   return knex.schema.createTable('guides', (table) => {
     table.increments('id');
-    table.string('title', 200).notNullable();
-    table.string('content', 1000).notNullable();
+    table.string('title', 200).notNullable().checkLength('>=', 3);
+    table.string('content', 1000).notNullable().checkLength('>=', 3);
     table.unique(['title', 'content']);
   });
 };

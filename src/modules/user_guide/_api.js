@@ -4,12 +4,12 @@ const { postUserGuide, getUserGuides, getAllUserGuides, getUserGuide, patchUserG
 
 const router = express.Router();
 
-router.post('/userguide', isLoggedIn, hasRole(['admin']), postUserGuide);
-router.get('/userguide', isLoggedIn, getUserGuides);
-router.get('/userguide/all', isLoggedIn, hasRole(['admin']), getAllUserGuides);
-router.get('/userguide/:id', isLoggedIn, getUserGuide);
-router.put('/userguide/:id', isLoggedIn, hasRole(['admin']), patchUserGuide);
-router.patch('/userguide/:id', isLoggedIn, completedUserGuide);
-router.delete('/userguide/:id', isLoggedIn, hasRole(['admin']), deleteUserGuide);
+router.post('/user-guides', isLoggedIn, hasRole(['admin']), postUserGuide);
+router.get('/user-guides', isLoggedIn, getUserGuides);
+router.get('/user-guides/all', isLoggedIn, hasRole(['admin']), getAllUserGuides);
+router.get('/user-guides/:id', isLoggedIn, getUserGuide);
+router.post('/user-guides/:id/read', isLoggedIn, completedUserGuide);
+router.patch('/user-guides/:id', isLoggedIn, hasRole(['admin']), patchUserGuide);
+router.delete('/user-guides/:id', isLoggedIn, hasRole(['admin']), deleteUserGuide);
 
 module.exports = router;

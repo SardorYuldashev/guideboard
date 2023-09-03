@@ -3,8 +3,8 @@ const { offsetPaginaionSchema, makeSortSchema } = require('../../shared/schemas'
 
 exports.postGuideSchema = {
   body: Joi.object({
-    title: Joi.string().required(),
-    content: Joi.string().required(),
+    title: Joi.string().required().min(3),
+    content: Joi.string().required().min(3),
     notify: Joi.boolean(),
   }),
 };
@@ -28,8 +28,8 @@ exports.patchGuideSchema = {
     id: Joi.number(),
   }),
   body: Joi.object({
-    title: Joi.string(),
-    content: Joi.string(),
+    title: Joi.string().min(3),
+    content: Joi.string().min(3),
     notify: Joi.boolean(),
   }),
 };

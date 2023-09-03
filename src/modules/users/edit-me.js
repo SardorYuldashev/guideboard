@@ -1,5 +1,4 @@
 const db = require('../../db');
-const { hash } = require('bcryptjs');
 
 const editMe = async ({ id, ...changes }) => {
   const result = await db('users')

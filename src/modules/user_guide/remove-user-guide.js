@@ -1,5 +1,5 @@
 const db = require('../../db');
-const { NotFoundError, ForbiddenError } = require('../../shared/errors');
+const { NotFoundError } = require('../../shared/errors');
 
 const removeUserGuide = async ({ id }) => {
   const existing = await db('user_guide').where({ id }).first();
