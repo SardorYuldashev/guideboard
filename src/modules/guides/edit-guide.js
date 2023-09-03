@@ -5,7 +5,7 @@ const editGuide = async ({ id, ...changes }) => {
   const existing = await db('guides').where({ id }).first();
 
   if (!existing) {
-    throw new NotFoundError("Qo'llanma topilmadi");
+    throw new NotFoundError("Qoida topilmadi");
   };
 
   if (!changes.title && !changes.content) {

@@ -31,11 +31,11 @@ const showUserGuide = async ({ id, user }) => {
     .first();
 
   if (!userGuide) {
-    throw new NotFoundError("Foydalanuvchi uchun qo'llanma topilmadi");
+    throw new NotFoundError("Vazifa topilmadi");
   };
 
   if (userGuide.user.id !== user.id) {
-    throw new ForbiddenError("Boshqalarni qo'llanmasini ko'rish mumkin emas");
+    throw new ForbiddenError("Boshqalarni vazifasini ko'rish mumkin emas");
   };
 
   return userGuide;

@@ -14,10 +14,12 @@ const listGuides = async ({ q, page = { limit: 10, offset: 0 }, sort = { by: 'id
 
   const data = await dbQuery;
 
+  const total = (await db("guides").select("id")).length;
+
   return {
     data,
     pageInfo: {
-      "total": data.length,
+      "total": total,
       "offset": page.offset,
       "limit": page.limit,
     },

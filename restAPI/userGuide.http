@@ -4,19 +4,19 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxL
 Content-Type: application/json
 
 {
-  "guide_id": 6,
-  "user_ids": [6]
+  "guide_id": 5,
+  "user_ids": [1]
 }
 
 
 ### Faqat o'zini user_guides listini ko'rish
 GET http://localhost:3000/user-guides
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNjQ2MzkwLCJleHAiOjE2OTM3MzI3OTB9.n-H8d-ch2zVCVTn5jlgY23FibSbh4SA64A3fn0yslp4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNzMyODI3LCJleHAiOjE2OTM4MTkyMjd9.i2_P-NfP6mz6-K4AmFz4KyxZuFdW78DnU2ZURT0kBro
 
 
 ### Hamma user_guides listni ko'rish (Admin)
 GET http://localhost:3000/user-guides/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNjQ2MzkwLCJleHAiOjE2OTM3MzI3OTB9.n-H8d-ch2zVCVTn5jlgY23FibSbh4SA64A3fn0yslp4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNzMyODI3LCJleHAiOjE2OTM4MTkyMjd9.i2_P-NfP6mz6-K4AmFz4KyxZuFdW78DnU2ZURT0kBro
 
 
 ### Bitta user_guide ni ko'rish
@@ -25,7 +25,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxL
 
 
 ### user_guide ni tahrirlash (Admin)
-PATCH http://localhost:3000/userguide/1
+PATCH http://localhost:3000/user-guides/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
 Content-Type: application/json
 

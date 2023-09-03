@@ -7,11 +7,6 @@ Content-Type: application/json
   "password": "1234"
 }
 
-# Admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
-
-# Employee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzNDE0NzA5LCJleHAiOjE2OTM1MDExMDl9.5_vV_EIpl8OBYwE3aOOpv0ET2a0MCUThpk6vfbDURLU
-
-
 ### POST User
 POST http://localhost:3000/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
@@ -33,7 +28,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxL
 
 ### GET Me
 GET http://localhost:3000/users/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNTczODI4LCJleHAiOjE2OTM2NjAyMjh9.7fpj_xBAaQ9y9Mi2SIz8t-6fgZNt1hpbpp-cKhZlvk4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNzMyODI3LCJleHAiOjE2OTM4MTkyMjd9.i2_P-NfP6mz6-K4AmFz4KyxZuFdW78DnU2ZURT0kBro
 
 
 ### GET User

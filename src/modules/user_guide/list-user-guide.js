@@ -25,10 +25,12 @@ const listUserGuide = async ({ user, page = { limit: 10, offset: 0 }, filters = 
 
   const data = await dbQuery;
 
+  const total = (await db("user_guide").where({ user_id: user.id }).select("id")).length;
+
   return {
     data,
     pageInfo: {
-      "total": data.length,
+      "total": total,
       "offset": page.offset,
       "limit": page.limit,
     },
