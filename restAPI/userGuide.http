@@ -15,8 +15,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxL
 
 
 ### Hamma user_guides listni ko'rish (Admin)
-GET http://localhost:3000/user-guides/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNzMyODI3LCJleHAiOjE2OTM4MTkyMjd9.i2_P-NfP6mz6-K4AmFz4KyxZuFdW78DnU2ZURT0kBro
+GET http://localhost:3000/user-guides/all?page[limit]=10&page[offset]=0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzODMxMTQyLCJleHAiOjE2OTM5MTc1NDJ9.JhYjATelR6vQhfDSJt_dhNA4vEwqM4bsCFfrW5HMYac
 
 
 ### Bitta user_guide ni ko'rish

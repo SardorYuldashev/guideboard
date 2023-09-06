@@ -29,11 +29,13 @@ const listAllUserGuide = async ({ page = { limit: 10, offset: 0 }, filters = {} 
     .where(filters)
     .groupBy('user_guide.id', 'guides.id', 'users.id');
 
+  dbQuery.orderBy('id', "asc");
+
   dbQuery.limit(page.limit).offset(page.offset);
 
   const data = await dbQuery;
 
-  const total = (await db("user_guide").select("id")).length;
+  const total = (await db("user_guide").select("id").where(filters)).length;
 
   return {
     data,

@@ -1,6 +1,6 @@
 const db = require('../../db');
 
-const listGuides = async ({ q, page = { limit: 10, offset: 0 }, sort = { by: 'id', order: 'asc' } }) => {
+const listGuides = async ({ q, page = { limit: 10, offset: 0 }, sort = { by: 'id', order: 'asc' }, filters = {} }) => {
   const dbQuery = db('guides')
     .select();
 
@@ -14,7 +14,7 @@ const listGuides = async ({ q, page = { limit: 10, offset: 0 }, sort = { by: 'id
 
   const data = await dbQuery;
 
-  const total = (await db("guides").select("id")).length;
+  const total = (await db("guides").select("id").where(filters)).length;
 
   return {
     data,

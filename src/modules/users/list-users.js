@@ -15,7 +15,7 @@ const listUsers = async ({ q, page = { limit: 10, offset: 0 }, sort = { by: 'id'
 
   const data = await dbQuery;
 
-  const total = (await db("users").select("id")).length;
+  const total = (await db("users").select("id").where(filters)).length;
 
   return {
     data,
