@@ -4,8 +4,11 @@ const listGuides = async ({ q, page = { limit: 10, offset: 0 }, sort = { by: 'id
   const dbQuery = db('guides')
     .select();
 
+  const queryClone = db("guides").select("id").where(filters);
+
   if (q) {
     dbQuery.andWhereILike('title', `%${q}%`);
+    queryClone.andWhereILike('title', `%${q}%`);
   };
 
   dbQuery.orderBy(sort.by, sort.order);
@@ -14,7 +17,7 @@ const listGuides = async ({ q, page = { limit: 10, offset: 0 }, sort = { by: 'id
 
   const data = await dbQuery;
 
-  const total = (await db("guides").select("id").where(filters)).length;
+  const total = (await queryClone).length;
 
   return {
     data,

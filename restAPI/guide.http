@@ -10,8 +10,8 @@ Content-Type: application/json
 
 
 ### GET Guides
-GET http://localhost:3000/guides
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
+GET http://localhost:3000/guides?q=muham&sort[order]=desc&sort[by]=id
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjk0MDI0MjU4LCJleHAiOjE2OTQxMTA2NTh9.0GqKm6Kg4Z0SvLqT-7S3RiGs02bD--PuRQc31ql3d50
 
 
 
