@@ -19,7 +19,7 @@ const isLoggedIn = (req, res, next) => {
     const key = auth.split(' ');
 
     if (key[0] !== "Bearer") {
-      throw new UnauthorizedError("Xato token")
+      throw new UnauthorizedError("Xato token");
     };
 
     const token = key[1];

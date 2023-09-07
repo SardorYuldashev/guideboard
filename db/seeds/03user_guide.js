@@ -98,7 +98,17 @@ exports.seed = async function (knex) {
     {
       // id: 19,
       guide_id: 2,
-      user_id: 2,
+      user_id: 3,
+    },
+    {
+      // id: 20,
+      guide_id: 6,
+      user_id: 12,
+    },
+    {
+      // id: 21,
+      guide_id: 3,
+      user_id: 13,
     },
   ]);
 };

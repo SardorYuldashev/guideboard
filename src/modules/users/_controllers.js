@@ -58,7 +58,7 @@ const loginUser = async (req, res, next) => {
  */
 const getUsers = async (req, res, next) => {
   try {
-    httpValidator({ query: req.query }, getUsersSchema)
+    httpValidator({ query: req.query }, getUsersSchema);
 
     const data = await listUsers({ ...req.query });
 

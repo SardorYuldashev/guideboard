@@ -36,7 +36,7 @@ const postGuide = async (req, res, next) => {
  */
 const getGuides = async (req, res, next) => {
   try {
-    httpValidator({ query: req.query }, getGuidesSchema)
+    httpValidator({ query: req.query }, getGuidesSchema);
 
     const data = await listGuides({ ...req.query });
 

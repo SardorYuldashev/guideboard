@@ -10,12 +10,12 @@ const db = knex({
     database: config.db.name,
     user: config.db.user,
     password: config.db.password,
-    port: config.db.port
+    port: config.db.port,
   },
   pool: {
     min: 2,
-    max: 10
-  }
+    max: 10,
+  },
 });
 
 module.exports = db;

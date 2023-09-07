@@ -3,64 +3,69 @@ POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-  "username": "sardor",
-  "password": "1234"
+  "username": "",
+  "password": ""
 }
+
 
 ### POST User
 POST http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjk0MDg0NzczLCJleHAiOjE2OTQxNzExNzN9.PsQKoDqRb0gW3fureM4KU_00yx2RfhhEuAeffd72ILM
+Authorization: Bearer
 Content-Type: application/json
 
 {
-  "first_name": "Suxrob",
-  "last_name": "Yuldashev",
-  "age": 20,
-  "role": "admin",
-  "username": "suxrob",
-  "password": "1234"
+  "first_name": "",
+  "last_name": "",
+  "age": ,
+  "role": "",
+  "username": "",
+  "password": ""
 }
 
 
 ### GET Users
-GET http://localhost:3000/users?q=s&filters[role]=admin
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjk0MDg0NzczLCJleHAiOjE2OTQxNzExNzN9.PsQKoDqRb0gW3fureM4KU_00yx2RfhhEuAeffd72ILM
+GET http://localhost:3000/users
+Authorization: Bearer
 
-
-### ?q=im&filters[role]=admin&sort[by]=id&sort[order]=asc
-### ?q=im&filters[role]=admin&sort[by]=id&sort[order]=desc
 
 ### GET Me
 GET http://localhost:3000/users/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNzMyODI3LCJleHAiOjE2OTM4MTkyMjd9.i2_P-NfP6mz6-K4AmFz4KyxZuFdW78DnU2ZURT0kBro
+Authorization: Bearer
 
 
 ### GET User
-GET http://localhost:3000/users/6
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
+GET http://localhost:3000/users/:id
+Authorization: Bearer
 
 
 ### EDIT Me
 PATCH http://localhost:3000/users/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNTczODI4LCJleHAiOjE2OTM2NjAyMjh9.7fpj_xBAaQ9y9Mi2SIz8t-6fgZNt1hpbpp-cKhZlvk4
+Authorization: Bearer
 Content-Type: application/json
 
 {
-  "first_name": "Sardor",
-  "age": 29
+  "first_name": "",
+  "last_name": "",
+  "age": ,
+  "username": "",
 }
 
 
 ### EDIT User
-PATCH http://localhost:3000/users/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNjQ2MzkwLCJleHAiOjE2OTM3MzI3OTB9.n-H8d-ch2zVCVTn5jlgY23FibSbh4SA64A3fn0yslp4
+PATCH http://localhost:3000/users/:id
+Authorization: Bearer
 Content-Type: application/json
 
 {
-  "role": "employee"
+  "first_name": "",
+  "last_name": "",
+  "age": ,
+  "role": "",
+  "username": "",
+  "password": ""
 }
 
 
 ### DELETE User
-DELETE http://localhost:3000/users/6
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
+DELETE http://localhost:3000/users/:id
+Authorization: Bearer

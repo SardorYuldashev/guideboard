@@ -3,7 +3,6 @@ const { hash } = require('bcryptjs');
 const { NotFoundError, ForbiddenError } = require('../../shared/errors');
 
 const editUser = async ({ id, user, ...changes }) => {
-
   const existing = await db('users').where({ id }).first();
 
   if (!existing) {

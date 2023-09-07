@@ -1,35 +1,35 @@
 ### POST Guide
 POST http://localhost:3000/guides
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNjQ2MzkwLCJleHAiOjE2OTM3MzI3OTB9.n-H8d-ch2zVCVTn5jlgY23FibSbh4SA64A3fn0yslp4
+Authorization: Bearer
 Content-Type: application/json
 
 {
-  "title": "sasasasasas",
-  "content": "Test uchun"
+  "title": "",
+  "content": ""
 }
 
 
 ### GET Guides
-GET http://localhost:3000/guides?q=muham&sort[order]=desc&sort[by]=id
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjk0MDI0MjU4LCJleHAiOjE2OTQxMTA2NTh9.0GqKm6Kg4Z0SvLqT-7S3RiGs02bD--PuRQc31ql3d50
-
+GET http://localhost:3000/guides
+Authorization: Bearer
 
 
 ### GET Guide
-GET http://localhost:3000/guides/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJyb2xlIjoiZW1wbG95ZWUifSwiaWF0IjoxNjkzNTEwNDc5LCJleHAiOjE2OTM1OTY4Nzl9.Pj7T5D-OXCE8m_9Byv0wLok4zKIfJN-xJM5RCDoNlR4
-
+GET http://localhost:3000/guides/:id
+Authorization: Bearer
 
 
 ### EDIT Guide
-PATCH http://localhost:3000/guides/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNTY0NTkzLCJleHAiOjE2OTM2NTA5OTN9.Wjv1TrKoSZxfauXZqcnTVAK56sNpuawmVH54krc09Sg
+PATCH http://localhost:3000/guides/:id
+Authorization: Bearer
 Content-Type: application/json
 
 {
-  "content": "Yig'ishtir telefonni"
+  "title": "",
+  "content": ""
 }
 
+
 ### DELETE Guide
-DELETE http://localhost:3000/guides/6
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
+DELETE http://localhost:3000/guides/:id
+Authorization: Bearer

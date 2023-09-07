@@ -2,7 +2,6 @@ const db = require('../../db');
 const { NotFoundError } = require('../../shared/errors');
 
 const addUserGuide = async (data) => {
-
   const existingGuide = await db('guides')
     .where({ id: data.guide_id })
     .select()

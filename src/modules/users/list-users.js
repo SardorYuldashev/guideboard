@@ -10,7 +10,7 @@ const listUsers = async ({ q, page = { limit: 10, offset: 0 }, sort = { by: 'id'
     dbQuery.where(function () {
       this.whereILike('first_name', `%${q}%`).orWhereILike('last_name', `%${q}%`)
     }).andWhere(filters);
-    
+
     queryClone.where(function () {
       this.whereILike('first_name', `%${q}%`).orWhereILike('last_name', `%${q}%`)
     }).andWhere(filters);

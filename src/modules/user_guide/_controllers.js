@@ -40,7 +40,7 @@ const postUserGuide = async (req, res, next) => {
  */
 const getUserGuides = async (req, res, next) => {
   try {
-    httpValidator({ query: req.query }, getUserGuideSchema)
+    httpValidator({ query: req.query }, getUserGuideSchema);
 
     const data = await listUserGuide({ user: req.user, ...req.query });
 
@@ -57,7 +57,7 @@ const getUserGuides = async (req, res, next) => {
  */
 const getAllUserGuides = async (req, res, next) => {
   try {
-    httpValidator({ query: req.query }, getAllUserGuideSchema)
+    httpValidator({ query: req.query }, getAllUserGuideSchema);
 
     const data = await listAllUserGuide({ ...req.query });
 
