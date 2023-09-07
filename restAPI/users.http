@@ -9,7 +9,7 @@ Content-Type: application/json
 
 ### POST User
 POST http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNDE0NjMzLCJleHAiOjE2OTM1MDEwMzN9.GRjbA5aW93Y6VSMtzj2LQhHYeYdsSRnokzgbPPs9cZk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjk0MDg0NzczLCJleHAiOjE2OTQxNzExNzN9.PsQKoDqRb0gW3fureM4KU_00yx2RfhhEuAeffd72ILM
 Content-Type: application/json
 
 {
@@ -23,8 +23,12 @@ Content-Type: application/json
 
 
 ### GET Users
-GET http://localhost:3000/users?q=b&filters[role]=admin&sort[by]=id&sort[order]=asc
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNTczODI4LCJleHAiOjE2OTM2NjAyMjh9.7fpj_xBAaQ9y9Mi2SIz8t-6fgZNt1hpbpp-cKhZlvk4
+GET http://localhost:3000/users?q=s&filters[role]=admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjk0MDg0NzczLCJleHAiOjE2OTQxNzExNzN9.PsQKoDqRb0gW3fureM4KU_00yx2RfhhEuAeffd72ILM
+
+
+### ?q=im&filters[role]=admin&sort[by]=id&sort[order]=asc
+### ?q=im&filters[role]=admin&sort[by]=id&sort[order]=desc
 
 ### GET Me
 GET http://localhost:3000/users/me
