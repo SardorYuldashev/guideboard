@@ -22,6 +22,7 @@ app.use('*', () => {
 
 app.use(handleError);
 
-app.listen(config.port, () => {
+const PORT = config.port || 3000;
+app.listen(PORT, () => {
   console.log(`http://localhost:${config.port}`);
 });
