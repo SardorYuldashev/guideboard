@@ -24,5 +24,5 @@ app.use(handleError);
 
 const PORT = config.port || 3000;
 app.listen(PORT, () => {
-  console.log(`http://localhost:${config.port}`);
+  console.log(`http://localhost:${PORT}`);
 });
