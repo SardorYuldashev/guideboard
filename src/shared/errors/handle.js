@@ -8,6 +8,8 @@ const { NotFoundError, BadRequestError, UnauthorizedError, ForbiddenError } = re
  * @param {express.NextFunction} next
  */
 module.exports = (err, req, res, next) => {
+  console.log("bu error", err);
+  console.log("bu request", req);
   let status = 500;
 
   if (err instanceof BadRequestError) status = 400;
@@ -17,3 +19,22 @@ module.exports = (err, req, res, next) => {
 
   res.status(status).json({ error: err.message });
 };
+
+
+
+// /**
+//  * @param {Error} err
+//  * @param {express.Request} req
+//  * @param {express.Response} res
+//  * @param {express.NextFunction} next
+//  */
+// module.exports = (err, req, res, next) => {
+//   let status = 500;
+
+//   if (err instanceof BadRequestError) status = 400;
+//   else if (err instanceof UnauthorizedError) status = 401;
+//   else if (err instanceof ForbiddenError) status = 403;
+//   else if (err instanceof NotFoundError) status = 404;
+
+//   res.status(status).json({ error: err.message });
+// };
