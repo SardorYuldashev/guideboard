@@ -13,7 +13,7 @@ app.use(express.json());
 
 // experiment boshlandi
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: 'https://guide-board.netlify.app/',
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
