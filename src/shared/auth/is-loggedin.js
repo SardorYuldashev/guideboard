@@ -10,30 +10,23 @@ const { UnauthorizedError } = require('../errors');
  */
 const isLoggedIn = (req, res, next) => {
   try {
-    const token = req.headers.authorization;
+    const auth = req.headers.authorization;
+
+    if (!auth) {
+      throw new UnauthorizedError('Avtorizatsiya qilmagansiz');
+    };
+
+    const key = auth.split(' ');
+
+    if (key[0] !== "Bearer") {
+      throw new UnauthorizedError("Xato token");
+    };
+
+    const token = key[1];
 
     if (!token) {
       throw new UnauthorizedError('Avtorizatsiya qilmagansiz');
     };
-
-    // Keyin kommentdan chiqariladi, tepadagi token o'chiriladi
-    // const auth = req.headers.authorization;
-
-    // if (!auth) {
-    //   throw new UnauthorizedError('Avtorizatsiya qilmagansiz');
-    // };
-
-    // const key = auth.split(' ');
-
-    // if (key[0] !== "Bearer") {
-    //   throw new UnauthorizedError("Xato token");
-    // };
-
-    // const token = key[1];
-
-    // if (!token) {
-    //   throw new UnauthorizedError('Avtorizatsiya qilmagansiz');
-    // };
 
     const decoded = jwt.verify(token, config.jwt.secret, { ignoreExpiration: false });
 
