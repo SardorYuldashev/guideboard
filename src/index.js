@@ -10,22 +10,7 @@ const { NotFoundError } = require('./shared/errors');
 const app = express();
 
 app.use(express.json());
-
-// experiment boshlandi
-const corsOptions = {
-  origin: 'http://localhost:5173',
-  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
-  maxAge: 600,
-};
-
-
-app.use(cors(corsOptions));
-// experiment tugadi
-
-// tepasi o'chiriladi
-// app.use(cors());
+app.use(cors());
 
 app.use(usersRoute);
 app.use(guidesRoute);
