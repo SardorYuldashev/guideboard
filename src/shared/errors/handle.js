@@ -9,8 +9,7 @@ const { error } = require('../schemas/offset-pagination');
  * @param {express.NextFunction} next
  */
 module.exports = (err, req, res, next) => {
-  console.log("bu error", err);
-  console.log("bu request", req);
+  console.log("bu request", req.body);
   let status = 500;
 
   if (err instanceof BadRequestError) status = 400;
