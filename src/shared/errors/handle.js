@@ -1,5 +1,6 @@
 const express = require('express');
 const { NotFoundError, BadRequestError, UnauthorizedError, ForbiddenError } = require('.');
+const { error } = require('../schemas/offset-pagination');
 
 /**
  * @param {Error} err
@@ -17,7 +18,11 @@ module.exports = (err, req, res, next) => {
   else if (err instanceof ForbiddenError) status = 403;
   else if (err instanceof NotFoundError) status = 404;
 
-  res.status(status).json({ error: err.message });
+  res.status(status).json({
+    error: err.message,
+    buError: err,
+    buReq: req
+  });
 };
 
 
