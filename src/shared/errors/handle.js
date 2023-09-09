@@ -9,7 +9,7 @@ const { error } = require('../schemas/offset-pagination');
  * @param {express.NextFunction} next
  */
 module.exports = (err, req, res, next) => {
-  console.log("bu request", req.body);
+  console.log("bu headers", req.headers);
   let status = 500;
 
   if (err instanceof BadRequestError) status = 400;
@@ -17,11 +17,7 @@ module.exports = (err, req, res, next) => {
   else if (err instanceof ForbiddenError) status = 403;
   else if (err instanceof NotFoundError) status = 404;
 
-  res.status(status).json({
-    error: err.message,
-    buError: err,
-    buReq: req
-  });
+  res.status(status).json({ error: err.message });
 };
 
 
