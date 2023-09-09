@@ -16,6 +16,10 @@ app.use(usersRoute);
 app.use(guidesRoute);
 app.use(userGuidesRoute);
 
+app.get("/", (req, res) => {
+  res.status(200).json({message: hello});
+});
+
 app.use('*', () => {
   throw new NotFoundError("Mavjud bo'lmagan yo'l");
 });
@@ -24,5 +28,5 @@ app.use(handleError);
 
 const PORT = config.port || 3000;
 app.listen(PORT, () => {
-  console.log(`Server ${PORT}-da run bo'ldi`);
+  console.log(`Server ${PORT}-portda run bo'ldi`);
 });
