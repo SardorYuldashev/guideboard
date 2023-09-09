@@ -6,7 +6,8 @@ const router = express.Router();
 
 router.post('/users/login', loginUser);
 router.post('/users', isLoggedIn, hasRole(['admin']), postUser);
-router.get('/users', isLoggedIn, hasRole(['admin']), getUsers);
+router.get('/users', getUsers);
+// router.get('/users', isLoggedIn, hasRole(['admin']), getUsers);
 router.get('/users/me', isLoggedIn, getMe);
 router.get('/users/:id', isLoggedIn, hasRole(['admin']), getUser);
 router.patch('/users/me', isLoggedIn, patchMe);

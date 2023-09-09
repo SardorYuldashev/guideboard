@@ -31,10 +31,6 @@ app.use(usersRoute);
 app.use(guidesRoute);
 app.use(userGuidesRoute);
 
-app.get("/", (req, res) => {
-  res.status(200).json({message: "Hello world"});
-});
-
 app.use('*', () => {
   throw new NotFoundError("Mavjud bo'lmagan yo'l");
 });
