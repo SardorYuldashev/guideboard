@@ -1,0 +1,34 @@
+### Sharh qo'shish
+POST http://localhost:3000/comments
+Authorization: Bearer 
+Content-Type: application/json
+
+{
+  "guide_id": ,
+  "content": ""
+}
+
+
+### Qoida sharhlarini olish
+GET http://localhost:3000/comments/guide/:guide_id
+Authorization: Bearer 
+
+
+### Sharhni ko'rish
+GET http://localhost:3000/comments/:id
+Authorization: Bearer 
+
+
+### Sharhni tahrirlash
+PATCH http://localhost:3000/comments/:id
+Authorization: Bearer 
+Content-Type: application/json
+
+{
+  "content": ""
+}
+
+
+### Sharhni o'chirish
+DELETE http://localhost:3000/comments/:id
+Authorization: Bearer 

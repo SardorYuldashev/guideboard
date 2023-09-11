@@ -1,4 +1,4 @@
-### LOGIN User
+### Login qilish
 POST http://localhost:3000/users/login
 Content-Type: application/json
 
@@ -8,7 +8,7 @@ Content-Type: application/json
 }
 
 
-### POST User
+### Foydalanuvchi qo'shish (Admin)
 POST http://localhost:3000/users
 Authorization: Bearer
 Content-Type: application/json
@@ -23,22 +23,22 @@ Content-Type: application/json
 }
 
 
-### GET Users
+### Foydalanuvchilar ro'yxatini olish (Admin)
 GET http://localhost:3000/users
 Authorization: Bearer
 
 
-### GET Me
+### Mening ma'lumotlarim
 GET http://localhost:3000/users/me
 Authorization: Bearer
 
 
-### GET User
+### Foydalanuvchini ko'rish (Admin)
 GET http://localhost:3000/users/:id
 Authorization: Bearer
 
 
-### EDIT Me
+### Ma'lumotlarimni tahrirlash
 PATCH http://localhost:3000/users/me
 Authorization: Bearer
 Content-Type: application/json
@@ -51,7 +51,7 @@ Content-Type: application/json
 }
 
 
-### EDIT User
+### Foydalanuvchi ma'lumotlarini tahrirlash (Admin)
 PATCH http://localhost:3000/users/:id
 Authorization: Bearer
 Content-Type: application/json
@@ -66,6 +66,6 @@ Content-Type: application/json
 }
 
 
-### DELETE User
+### Foydalanuvchini o'chirish (Admin)
 DELETE http://localhost:3000/users/:id
 Authorization: Bearer

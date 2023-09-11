@@ -5,6 +5,7 @@ const handleError = require("./shared/errors/handle");
 const usersRoute = require('./modules/users/_api');
 const guidesRoute = require('./modules/guides/_api');
 const userGuidesRoute = require('./modules/user_guide/_api');
+const commentsRoute = require('./modules/comments/_api');
 const { NotFoundError } = require('./shared/errors');
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(usersRoute);
 app.use(guidesRoute);
 app.use(userGuidesRoute);
+app.use(commentsRoute);
 
 app.use('*', () => {
   throw new NotFoundError("Mavjud bo'lmagan yo'l");

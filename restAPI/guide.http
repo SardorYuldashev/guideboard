@@ -1,4 +1,4 @@
-### POST Guide
+### Qoida yaratish
 POST http://localhost:3000/guides
 Authorization: Bearer
 Content-Type: application/json
@@ -9,17 +9,17 @@ Content-Type: application/json
 }
 
 
-### GET Guides
+### Qoidalar ro'yxatini olish
 GET http://localhost:3000/guides
 Authorization: Bearer
 
 
-### GET Guide
+### Bitta qoidani ko'rish
 GET http://localhost:3000/guides/:id
-Authorization: Bearer
+Authorization: Bearer 
 
 
-### EDIT Guide
+### Qoidani tahrirlash
 PATCH http://localhost:3000/guides/:id
 Authorization: Bearer
 Content-Type: application/json
@@ -30,6 +30,6 @@ Content-Type: application/json
 }
 
 
-### DELETE Guide
+### Qoidani o'chirish
 DELETE http://localhost:3000/guides/:id
 Authorization: Bearer

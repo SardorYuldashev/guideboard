@@ -1,6 +1,6 @@
 ### user_guide yaratish (Admin)
 POST http://localhost:3000/user-guides
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjkzNzMyODI3LCJleHAiOjE2OTM4MTkyMjd9.i2_P-NfP6mz6-K4AmFz4KyxZuFdW78DnU2ZURT0kBro
+Authorization: Bearer 
 Content-Type: application/json
 
 {
