@@ -5,7 +5,7 @@ const addGuide = async (data) => {
     .insert({ title: data.title, content: data.content })
     .returning('*');
 
-  if (typeof data.notify === 'boolean' && data.notify === true) {
+  if (data.notify) {
     const users = await db('users')
       .select();
 
