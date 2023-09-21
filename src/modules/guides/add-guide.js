@@ -9,10 +9,8 @@ const addGuide = async (data) => {
     const users = await db('users')
       .select();
 
-    users.forEach(async item => {
-      await db('user_guide')
-        .insert({ guide_id: result[0].id, user_id: item.id });
-    });
+    const notifications = users.map(user => ({ guide_id: result[0].id, user_id: user.id }))
+    await db('user_guide').insert(notifications);
 
     result[0].notified = true;
   };
