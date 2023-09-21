@@ -7,6 +7,7 @@ exports.up = function (knex) {
     table.increments('id');
     table.string('title', 200).notNullable().checkLength('>=', 3);
     table.string('content', 1000).notNullable().checkLength('>=', 3);
+    // Pastdagi kod juda ham qimmatga tushadigan constraint (aka index)
     table.unique(['title', 'content']);
   });
 };
