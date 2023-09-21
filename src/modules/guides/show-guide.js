@@ -7,15 +7,7 @@ const showGuide = async ({ id }) => {
     .where({ 'guides.id': id })
     .select(
       'guides.*',
-      db.raw(`
-        COALESCE(
-          json_agg(
-            json_build_object(
-              'id', user_guide.id
-            ) 
-          ) filter (where user_guide.guide_id IS NOT NULL), '[]'
-        ) as revisions
-      `),
+      db.raw(`COUNT(user_guide.id) as revisions`)
     )
     .groupBy('guides.id')
     .first();
@@ -24,10 +16,7 @@ const showGuide = async ({ id }) => {
     throw new NotFoundError("Qo'llanma topilmadi");
   };
 
-  return {
-    ...guide,
-    revisions: guide.revisions.length,
-  };
+  return guide
 };
 
 module.exports = showGuide;
