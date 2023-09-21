@@ -16,13 +16,11 @@ const isLoggedIn = (req, res, next) => {
       throw new UnauthorizedError('Avtorizatsiya qilmagansiz');
     };
 
-    const key = auth.split(' ');
+    const [type, token] = auth.split(' ');
 
-    if (key[0] !== "Bearer") {
+    if (type !== "Bearer") {
       throw new UnauthorizedError("Xato token");
     };
-
-    const token = key[1];
 
     if (!token) {
       throw new UnauthorizedError('Avtorizatsiya qilmagansiz');
